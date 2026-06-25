@@ -1,0 +1,244 @@
+/* --- VARIABLES DE DISEÑO (Paleta Café / Chocolate / Crema) --- */
+:root {
+    --bg-principal: #fbf9f6;
+    --bg-tarjetas: #ffffff;
+    --texto-principal: #3e2723;
+    --texto-secundario: #5d4037;
+    --color-acento: #8d6e63;
+    --color-acento-claro: #d7ccc8;
+    --borde: #efebe9;
+}
+
+/* --- ESTILOS GENERALES --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* --- HEADER & NAVEGACIÓN --- */
+header {
+    background-color: var(--texto-principal);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--color-acento-claro);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* --- SECCIÓN HERO (INICIO) --- */
+.hero {
+    background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--color-acento-claro);
+    max-width: 800px;
+    margin: 0 auto 10px;
+}
+
+.sub-hero-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- SECCIONES REUTILIZABLES --- */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--texto-principal);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-acento);
+    margin: 10px auto 0;
+}
+
+/* --- GRID Y TARJETAS --- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.grid-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--bg-tarjetas);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-left: 5px solid var(--color-acento);
+}
+
+.card ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.rol-tag {
+    color: var(--texto-secundario);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.divisor {
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid var(--borde);
+}
+
+/* --- LISTADO DE EVIDENCIAS --- */
+.lista-evidencias {
+    list-style: none !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+}
+
+.lista-evidencias li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* --- ELEMENTOS DE TEXTO ESPECÍFICOS --- */
+blockquote {
+    background-color: var(--color-acento-claro);
+    color: var(--texto-principal);
+    padding: 20px;
+    border-left: 5px solid var(--color-acento);
+    font-style: italic;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.evidencia-link {
+    color: var(--color-acento);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.evidencia-link:hover {
+    text-decoration: underline;
+}
+
+.reflexion-texto {
+    font-style: italic;
+    color: var(--texto-secundario);
+    margin-top: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--texto-principal);
+    color: var(--color-acento-claro);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .nav-container { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    nav ul { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    nav ul li { 
+        margin: 5px 10px; 
+    }
+    .hero h1 { 
+        font-size: 2rem; 
+    }
+    .lista-evidencias li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin-bottom: 12px;
+    }
+}
