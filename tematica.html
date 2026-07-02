@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temática Vista</title>
+    <title>Temática | ADSO Comunicaciones</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -16,7 +16,6 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="introduccion.html">Introducción</a></li>
                     <li><a href="tematica.html">Temática</a></li>
-                    <li><a href="reto.html">El Reto</a></li>
                     <li><a href="equipo_evidencias.html">Equipo y Evidencias</a></li>
                 </ul>
             </nav>
@@ -24,20 +23,30 @@
     </header>
 
     <div class="container">
-        <section id="tematica" style="border: none;">
-            <h2>Temática Vista en Formación</h2>
-            <div class="grid-2">
-                <div class="card">
+        <section class="seccion-tematica">
+            <h2>Tipos de Comunicación en el Desarrollo</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Dominar estos estilos es clave para el éxito en cualquier ciclo de vida de software.</p>
+
+            <div class="grid-tematica">
+                <!-- Tarjeta 1 -->
+                <div class="card-tematica tipo-asertiva">
                     <h3>Comunicación Asertiva</h3>
-                    <p>Habilidad para expresar ideas, sentimientos y necesidades de forma directa, segura, tranquila y honesta, al mismo tiempo que se es empático y respetuoso con las otras personas.</p>
+                    <p><strong>Beneficio:</strong> Reduce malentendidos y crea un ambiente de confianza.</p>
+                    <p><em>Ejemplo:</em> "Entiendo tu propuesta técnica, pero me preocupa que afecte la escalabilidad; propongo revisarlo juntos."</p>
                 </div>
-                <div class="card">
-                    <h3>Componentes Clave en Software</h3>
-                    <ul>
-                        <li>Claridad en la especificación de requisitos.</li>
-                        <li>Feedback constructivo y resolución de conflictos.</li>
-                        <li>Negociación eficaz de plazos y recursos con Stakeholders.</li>
-                    </ul>
+
+                <!-- Tarjeta 2 -->
+                <div class="card-tematica tipo-pasiva">
+                    <h3>Comunicación Pasiva</h3>
+                    <p><strong>Beneficio:</strong> Evita conflictos inmediatos (aunque a menudo genera deuda técnica a largo plazo).</p>
+                    <p><em>Ejemplo:</em> Aceptar un requerimiento imposible de cumplir sin explicar las limitaciones técnicas al cliente.</p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="card-tematica tipo-agresiva">
+                    <h3>Comunicación Agresiva</h3>
+                    <p><strong>Beneficio:</strong> Ninguno en entornos profesionales; suele romper la cohesión del equipo.</p>
+                    <p><em>Ejemplo:</em> "Este código es un desastre, no sé quién lo escribió pero no tiene ni idea de lo que hace."</p>
                 </div>
             </div>
         </section>
